@@ -1,8 +1,0 @@
-0. Test commit
-1.Linux is the best! ;-) m,da
-And Java is the best :-D
-Linux firewall is very strong;
-And
-2.Apple is the new Microsoft.
-
-3.This is new commit.

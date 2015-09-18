@@ -1,3 +1,7 @@
 Hi.
 asl pls
+<<<<<<< HEAD
 ..
+=======
+sdasad
+>>>>>>> 203aebaefc16aebd7ada2d5ded91e08f763caba6

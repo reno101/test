@@ -1,0 +1,14 @@
+using system;
+
+namespace nnnn
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+        
+              Console.WriteLie("Who0");
+              
+  }
+  }
+  }

@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+Aloha!
+
+=======
 Hi.
 ..
+>>>>>>> f737282f4bf441242e53cd9bfeebddb37188dbe4

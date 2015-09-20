@@ -1,0 +1,78 @@
+using System;
+
+namespace ednoruk_bandit
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("The rules:");
+            Console.WriteLine("3|*|2 = x1");
+            Console.WriteLine("1|1|1 = x2");
+            Console.WriteLine("2|2|2 = x3");
+            Console.WriteLine("3|3|3 = x4");
+            Console.WriteLine("4|4|4 = x5");
+            Console.WriteLine("2|4|1 = x0");
+            Console.WriteLine();
+
+            again:
+             
+            Console.WriteLine("How much money will you bet?");
+            int moneyToPlay = int.Parse(Console.ReadLine());
+            int winStar = moneyToPlay * 1;
+            int winOne = moneyToPlay * 2;
+            int winTwo = moneyToPlay * 3;
+            int winThree = moneyToPlay * 4;
+            int winFour = moneyToPlay * 5;
+            
+            Random r = new Random();
+            int one = r.Next(1, 5);
+            int two = r.Next(1, 5);
+            int three = r.Next(1, 5);
+            int noWin = r.Next(1, 6);
+            char star = '*';
+            if (one == 1 && two == 1 && three == 1)
+            {
+                Console.WriteLine("|{0}|{1}|{2}|", one, two, three);
+                Console.WriteLine("Congratulations you won:{0}", winOne);
+                Console.WriteLine();
+                goto again;
+            }
+            else if (one == 2 && two == 2 && three == 2)
+            {
+                Console.WriteLine("|{0}|{1}|{2}|", one, two, three);
+                Console.WriteLine("Congratulations you won:{0}", winTwo); 
+                Console.WriteLine();
+                goto again;
+            }
+            else if (one == 3 && two == 3 && three == 3)
+            {
+                Console.WriteLine("|{0}|{1}|{2}|", one, two, three);
+                Console.WriteLine("Congratulations you won:{0}", winThree);
+                Console.WriteLine();
+                goto again;
+            }
+            else if (one == 4 && two == 4 && three == 4)
+            {
+                Console.WriteLine("|{0}|{1}|{2}|", one, two, three);
+                Console.WriteLine("Congratulations you won:{0}", winFour);
+                Console.WriteLine();
+                goto again;
+            }
+            else if (noWin == 5)
+            {
+                Console.WriteLine("|{0}|{1}|{2}|", one, star, three);
+                Console.WriteLine("Congratulations you won the lucky star:{0}", winStar);
+                Console.WriteLine();
+                goto again;
+            }
+            else
+            {
+                Console.WriteLine("|{0}|{1}|{2}|", one, two, three);
+                Console.WriteLine("Bad luck, try again");
+                Console.WriteLine();
+                goto again;
+            }
+        }
+    }
+}
